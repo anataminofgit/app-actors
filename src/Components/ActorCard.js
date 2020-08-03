@@ -11,8 +11,6 @@ const ActorCard = (props) => {
 
     return (
         <div>
-            actor name : {actor.fname + " " + actor.lname}
-            age: {actor.getAge()}
             <Card className="card">
                 <Card.Img variant="top" src={imgUrl} />
                 <Card.Body>
