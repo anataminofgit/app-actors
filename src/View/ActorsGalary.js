@@ -1,5 +1,7 @@
 import React from "react"
 import ActorCard from "../Components/ActorCard";
+import CardDeck from 'react-bootstrap/CardDeck'
+
 
 const ActorGalary = (props) => {
     const { actors } = props;
@@ -12,9 +14,9 @@ const ActorGalary = (props) => {
     })
 
     return (
-        <div>
+        <CardDeck>
             {ListActors}
-        </div>
+        </CardDeck>
     );
 
 }
