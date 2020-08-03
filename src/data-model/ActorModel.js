@@ -7,7 +7,6 @@ class ActorModel {
         this.birthday = birthday;
         this.imgUrl = imgUrl;
         this.linkIMDB = linkIMDB;
-        console.log("ActorModel", this);
     }
 
     getAge() {

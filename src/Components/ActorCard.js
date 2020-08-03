@@ -1,13 +1,10 @@
 import React from "react"
-import ActorModel from "../data-model/ActorModel";
 import Card from 'react-bootstrap/Card'
 import "./ActorCard.css"
 
 
 const ActorCard = (props) => {
-    const { fname, lname, birthday, imgUrl, linkIMDB } = props;
-    console.log("props", props)
-    const actor = new ActorModel(fname, lname, birthday, imgUrl, linkIMDB);
+    const { fname, lname, birthday, imgUrl, linkIMDB , age} = props;
 
     return (
         <div>
@@ -24,7 +21,7 @@ const ActorCard = (props) => {
                    </Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                    <small className="text-muted">Age: {actor.getAge()}</small>
+                    <small className="text-muted">Age: {age}</small>
                 </Card.Footer>
             </Card>
         </div>
