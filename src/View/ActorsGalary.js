@@ -41,7 +41,7 @@ const ActorGalary = (props) => {
     const listActorsViews = listActorsModel.map(item => {
             const { fname, lname, birthday, imgUrl, linkIMDB } = item;
             const age = item.getAge();
-            return <ActorCard key={item} fname={fname} lname={lname}
+            return <ActorCard key={linkIMDB} fname={fname} lname={lname}
                 birthday={birthday} imgUrl={imgUrl} linkIMDB={linkIMDB} age={age} />
         });
 
@@ -67,10 +67,10 @@ const ActorGalary = (props) => {
                         <Button variant="success">Sort By</Button>
                         <Dropdown.Toggle split variant="success" id="dropdown-split-basic" />
                         <Dropdown.Menu>
-                            <Dropdown.Item onClick={() => { dropDownClick(null) }} >None</Dropdown.Item>
-                            <Dropdown.Item onClick={() => { dropDownClick("First") }} >First Name</Dropdown.Item>
-                            <Dropdown.Item onClick={() => { dropDownClick("Last") }} >Last Name</Dropdown.Item>
-                            <Dropdown.Item onClick={() => { dropDownClick("Age") }} >Age</Dropdown.Item>
+                            <Dropdown.Item key = "none" onClick={() => { dropDownClick(null) }} >None</Dropdown.Item>
+                            <Dropdown.Item key = "First" onClick={() => { dropDownClick("First") }} >First Name</Dropdown.Item>
+                            <Dropdown.Item key = "last" onClick={() => { dropDownClick("Last") }} >Last Name</Dropdown.Item>
+                            <Dropdown.Item key = "Age" onClick={() => { dropDownClick("Age") }} >Age</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
 
