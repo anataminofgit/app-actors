@@ -6,6 +6,8 @@ import "./ActorCard.css"
 const ActorCard = (props) => {
     const { fname, lname, birthday, imgUrl, linkIMDB , age} = props;
 
+
+    // const birthDate = Date(birthday).toDateString(birthday);
     return (
         <div>
             <Card className="card">
@@ -15,9 +17,7 @@ const ActorCard = (props) => {
                         <a href={linkIMDB}>{`${fname} ${lname}`}</a>
                     </Card.Title>
                     <Card.Text>
-                        This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to
-                        show that equal height action.
+                        {fname} {lname} was born on {birthday}
                    </Card.Text>
                 </Card.Body>
                 <Card.Footer>
