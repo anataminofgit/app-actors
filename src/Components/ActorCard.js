@@ -1,10 +1,11 @@
 import React from "react"
 import Card from 'react-bootstrap/Card'
 import "./ActorCard.css"
+import { Button } from "react-bootstrap";
 
 
 const ActorCard = (props) => {
-    const { fname, lname, birthday, imgUrl, linkIMDB , age} = props;
+    const { fname, lname, imgUrl, linkIMDB, age, actorID, funcOnMovieClick } = props;
 
 
     // const birthDate = Date(birthday).toDateString(birthday);
@@ -17,7 +18,7 @@ const ActorCard = (props) => {
                         <a href={linkIMDB}>{`${fname} ${lname}`}</a>
                     </Card.Title>
                     <Card.Text>
-                        {fname} {lname} was born on {birthday}
+                        <Button onClick={()=>{funcOnMovieClick(actorID)}}> {`the movies`}</Button>
                    </Card.Text>
                 </Card.Body>
                 <Card.Footer>
