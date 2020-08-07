@@ -28,7 +28,7 @@ const MovieGalary = (props) => {
                 setMovieList(list)
             })
 
-            else
+        else
             setMovieList([]);
 
     }, [selectedActor]);
@@ -37,6 +37,7 @@ const MovieGalary = (props) => {
     return (
         <div>
             <Container>
+                <h1>{selectedActor}{selectedActor ? "'s Movies" : ""}</h1>
                 <Accordion className="movie-list" >
                     {movieList.map((item, index) => <MovieItem key={item.id} data={item} eventKey={item.id} />)}
                 </Accordion>

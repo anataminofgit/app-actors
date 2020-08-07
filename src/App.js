@@ -20,6 +20,27 @@ function App() {
     imgUrl: "https://m.media-amazon.com/images/M/MV5BMTQ3NzMzOTQ3MF5BMl5BanBnXkFtZTcwOTE0MzY1Mw@@._V1_UY317_CR13,0,214,317_AL_.jpg",
     linkIMDB: "https://www.imdb.com/name/nm0000140"
 
+  },{
+    fname: "Jim",
+    lname: "Carrey",
+    birthday: "19601203",
+    imgUrl: "https://m.media-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg",
+    linkIMDB: "https://www.imdb.com/name/nm0000120"
+
+  },{
+    fname: "Phoebe",
+    lname: "Cates",
+    birthday: "19601203",
+    imgUrl: "https://m.media-amazon.com/images/M/MV5BMTc4NjA1NDI4NF5BMl5BanBnXkFtZTcwMzIwNjQzMg@@._V1_.jpg",
+    linkIMDB: "https://www.imdb.com/name/nm0000121"
+
+  },{
+    fname: "Charles",
+    lname: "Chaplin",
+    birthday: "19601203",
+    imgUrl: "https://m.media-amazon.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_SY1000_CR0,0,646,1000_AL_.jpg",
+    linkIMDB: "https://www.imdb.com/name/nm0000122"
+
   }, {
     fname: "Barbara",
     lname: "Hershey",

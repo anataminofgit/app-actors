@@ -53,16 +53,12 @@ const ActorGalary = (props) => {
     }
 
 
-
- 
-
     const listActorsViews = listActorsModel.map(item => {
         const { fname, lname, birthday, imgUrl, linkIMDB } = item;
         const age = item.getAge();
         return <ActorCard key={linkIMDB} fname={fname} lname={lname}
             birthday={birthday} imgUrl={imgUrl} linkIMDB={linkIMDB} age={age} actorID={`${fname} ${lname}`} funcOnMovieClick={handleActorMovies} />
     });
-
 
 
     return (

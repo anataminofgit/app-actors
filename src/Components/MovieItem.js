@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Accordion, Card, Row, Col } from 'react-bootstrap';
+import { Button, Accordion, Card, Row, Col, Container } from 'react-bootstrap';
 
 const MovieItem = (props) => {
 
@@ -15,16 +15,18 @@ const MovieItem = (props) => {
             </Card.Header>
             <Accordion.Collapse eventKey={eventKey}>
                 <Card.Body>
+                    <Container>
                     <Row>
-                        <Col>
-                            <img src={posterUrl} alt="img" />
+                        <Col md={6}>
+                            <img style ={{width:"100%"}}src={posterUrl} alt="img" />
                         </Col>
-                        <Col>
+                        <Col md={6}>
                             <h4>Released: {releaseDate}</h4>
                             <h4>Overview</h4>
                             <p>{overview}</p>
                         </Col>
                     </Row>
+                    </Container>
                 </Card.Body>
             </Accordion.Collapse>
         </Card>
