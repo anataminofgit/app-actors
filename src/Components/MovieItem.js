@@ -20,8 +20,8 @@ const MovieItem = (props) => {
                             <img src={posterUrl} alt="img" />
                         </Col>
                         <Col>
-                            <h4>released on {releaseDate}</h4>
-                            <h5>overview</h5>
+                            <h4>Released: {releaseDate}</h4>
+                            <h4>Overview</h4>
                             <p>{overview}</p>
                         </Col>
                     </Row>
