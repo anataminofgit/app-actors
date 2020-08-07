@@ -35,11 +35,11 @@ function App() {
     linkIMDB: "https://www.imdb.com/name/nm0000121"
 
   },{
-    fname: "Charles",
-    lname: "Chaplin",
+    fname: "Geena",
+    lname: "Davis",
     birthday: "19601203",
-    imgUrl: "https://m.media-amazon.com/images/M/MV5BNDcwMDc0ODAzOF5BMl5BanBnXkFtZTgwNTY2OTI1MDE@._V1_SY1000_CR0,0,646,1000_AL_.jpg",
-    linkIMDB: "https://www.imdb.com/name/nm0000122"
+    imgUrl: "https://m.media-amazon.com/images/M/MV5BOWU5MGMzMWYtYWQ1Ny00Njk0LTg3NTctZDgxOGUyNDhjNDJhXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+    linkIMDB: "https://www.imdb.com/name/nm0000133"
 
   }, {
     fname: "Barbara",
