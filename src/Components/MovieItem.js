@@ -1,21 +1,33 @@
 import React from 'react';
-import { Button, Accordion, Card } from 'react-bootstrap';
+import { Button, Accordion, Card, Row, Col } from 'react-bootstrap';
 
 const MovieItem = (props) => {
 
-    const { eventKey } = props;
+    const { eventKey, data } = props;
+    const { id, title, releaseDate, overview, posterUrl, voteAv } = data;
+
     return (
-        <Card>
+        <Card style={{ width: '100%' }} >
             <Card.Header>
                 <Accordion.Toggle as={Button} variant="link" eventKey={eventKey}>
-                    Click me!
+                    {title}
                 </Accordion.Toggle>
             </Card.Header>
             <Accordion.Collapse eventKey={eventKey}>
-                <Card.Body>Hello! I'm the body</Card.Body>
+                <Card.Body>
+                    <Row>
+                        <Col>
+                            <img src={posterUrl} alt="img" />
+                        </Col>
+                        <Col>
+                            <h4>released on {releaseDate}</h4>
+                            <h5>overview</h5>
+                            <p>{overview}</p>
+                        </Col>
+                    </Row>
+                </Card.Body>
             </Accordion.Collapse>
         </Card>
-
     );
 }
 
