@@ -4,8 +4,9 @@ import { Button, Accordion, Card, Row, Col, Container } from 'react-bootstrap';
 const MovieItem = (props) => {
 
     const { eventKey, data } = props;
-    const { id, title, releaseDate, overview, posterUrl, voteAv } = data;
-
+    const { title, releaseDate, overview, posterUrl } = data;
+    // const { id, title, releaseDate, overview, posterUrl, voteAv } = data;
+    console.log(eventKey);
     return (
         <Card style={{ width: '100%' }} >
             <Card.Header>
@@ -16,16 +17,16 @@ const MovieItem = (props) => {
             <Accordion.Collapse eventKey={eventKey}>
                 <Card.Body>
                     <Container>
-                    <Row>
-                        <Col md={6}>
-                            <img style ={{width:"100%"}}src={posterUrl} alt="img" />
-                        </Col>
-                        <Col md={6}>
-                            <h4>Released: {releaseDate}</h4>
-                            <h4>Overview</h4>
-                            <p>{overview}</p>
-                        </Col>
-                    </Row>
+                        <Row>
+                            <Col md={6}>
+                                <img style={{ width: "100%" }} src={posterUrl} alt="img" />
+                            </Col>
+                            <Col md={6}>
+                                <h4>Released: {releaseDate}</h4>
+                                <h4>Overview</h4>
+                                <p>{overview}</p>
+                            </Col>
+                        </Row>
                     </Container>
                 </Card.Body>
             </Accordion.Collapse>

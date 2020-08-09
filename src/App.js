@@ -3,6 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import ActorGalary from './View/ActorsGalary';
 import MovieGalary from './View/MovieGalary';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import HomePage from './View/HomePage';
+import { Navbar, Nav } from 'react-bootstrap';
 
 
 function App() {
@@ -20,21 +23,21 @@ function App() {
     imgUrl: "https://m.media-amazon.com/images/M/MV5BMTQ3NzMzOTQ3MF5BMl5BanBnXkFtZTcwOTE0MzY1Mw@@._V1_UY317_CR13,0,214,317_AL_.jpg",
     linkIMDB: "https://www.imdb.com/name/nm0000140"
 
-  },{
+  }, {
     fname: "Jim",
     lname: "Carrey",
     birthday: "19601203",
     imgUrl: "https://m.media-amazon.com/images/M/MV5BMTQwMjAwNzI0M15BMl5BanBnXkFtZTcwOTY1MTMyOQ@@._V1_UY317_CR22,0,214,317_AL_.jpg",
     linkIMDB: "https://www.imdb.com/name/nm0000120"
 
-  },{
+  }, {
     fname: "Phoebe",
     lname: "Cates",
     birthday: "19601203",
     imgUrl: "https://m.media-amazon.com/images/M/MV5BMTc4NjA1NDI4NF5BMl5BanBnXkFtZTcwMzIwNjQzMg@@._V1_.jpg",
     linkIMDB: "https://www.imdb.com/name/nm0000121"
 
-  },{
+  }, {
     fname: "Geena",
     lname: "Davis",
     birthday: "19601203",
@@ -50,17 +53,41 @@ function App() {
   }]
 
 
-  const [selectedActor, SetSelectedActor] = React.useState(null);
+  //const [selectedActor, SetSelectedActor] = React.useState(null);
   const updateSelectedActor = (actor) => {
 
-    SetSelectedActor(actor);
+    // SetSelectedActor(actor);
   }
 
   return (
     <div >
-      My App
-      <ActorGalary className="actor-galary" actors={actorsArr} funcActorMovies={updateSelectedActor} />
-      <MovieGalary className="movie-galery" selectedActor={selectedActor} />
+      <Navbar bg="primary" variant="dark">
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#actors">Actors</Nav.Link>
+        </Nav>
+      </Navbar>
+
+
+      <HashRouter>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route exact path="/home">
+            <HomePage />
+          </Route>
+
+          <Route exact path="/actors">
+            <ActorGalary className="actor-galary" actors={actorsArr} funcActorMovies={updateSelectedActor} />
+          </Route>
+          <Route exact path="/actor/:actorName/movies">
+          {/* selectedActor={selectedActor}  */}
+            <MovieGalary className="movie-galery" />
+          </Route>
+        </Switch>
+      </HashRouter>
+      {/* <MovieGalary className="movie-galery" selectedActor={selectedActor} /> */}
     </div>
 
   );
