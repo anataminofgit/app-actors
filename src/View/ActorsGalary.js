@@ -12,7 +12,6 @@ const ActorGalary = (props) => {
     const { actors, funcActorMovies } = props;
     const [filter, setFilter] = React.useState("");
     const [actorSort, setActorSort] = React.useState(0);
-   // const [movies,setMovies] = React.useState(-1);
 
     let listActorsModel = actors.map((item) => {
         const { fname, lname, birthday, imgUrl, linkIMDB } = item;

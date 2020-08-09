@@ -5,8 +5,6 @@ const MovieItem = (props) => {
 
     const { eventKey, data } = props;
     const { title, releaseDate, overview, posterUrl } = data;
-    // const { id, title, releaseDate, overview, posterUrl, voteAv } = data;
-    console.log(eventKey);
     return (
         <Card style={{ width: '100%' }} >
             <Card.Header>
